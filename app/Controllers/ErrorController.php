@@ -1,6 +1,6 @@
 <?php
 
-namespace PBST\Controllers;
+namespace Timpress\Controllers;
 
 class ErrorController extends Controller {
   public function render()

@@ -1,6 +1,6 @@
 <?php
 
-namespace PBST\Providers;
+namespace Timpress\Providers;
 
 use Timber\Timber;
 

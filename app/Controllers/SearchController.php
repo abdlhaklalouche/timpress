@@ -1,6 +1,6 @@
 <?php
 
-namespace PBST\Controllers;
+namespace Timpress\Controllers;
 
 class SearchController extends Controller {
   public function render()

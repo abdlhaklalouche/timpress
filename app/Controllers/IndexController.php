@@ -1,6 +1,6 @@
 <?php
 
-namespace PBST\Controllers;
+namespace Timpress\Controllers;
 
 class IndexController extends Controller {
   public function render()

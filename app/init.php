@@ -1,6 +1,6 @@
 <?php
 
-namespace PBST;
+namespace Timpress;
 
 class init {
 

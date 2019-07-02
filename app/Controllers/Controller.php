@@ -1,6 +1,6 @@
 <?php
 
-namespace PBST\Controllers;
+namespace Timpress\Controllers;
 
 use Timber\Timber;
 

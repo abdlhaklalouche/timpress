@@ -3,9 +3,9 @@
 return [
   'setup' => [
     'providers' => [
-      PBST\Providers\Setup::class,
-      PBST\Providers\Enqueue::class,
-      PBST\Providers\Menus::class,
+      Timpress\Providers\Setup::class,
+      Timpress\Providers\Enqueue::class,
+      Timpress\Providers\Menus::class,
     ]
   ]
 ];
