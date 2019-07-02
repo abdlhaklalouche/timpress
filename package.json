@@ -1,0 +1,33 @@
+{
+  "name": "timpress",
+  "version": "1.0.0",
+  "description": "WordPress starter theme with timber support",
+	"keywords": ["Timpress", "WordPress", "Theme", "MVC", "Twig templates", "Twig", "Timber"],
+  "main": "index.js",
+  "author": "Abdelhak Lallouche <abdlhaklalouche@gmail.com>",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "cross-env": "^5.1",
+    "jquery": "^3.3.1",
+    "laravel-mix": "^4.0.14",
+    "lodash": "^4.17.4",
+    "popper.js": "^1.14.7",
+    "sass": "^1.17.0",
+    "sass-loader": "7.*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdlhaklalouche/timpress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abdlhaklalouche/timpress/issues"
+  },
+  "license": "GPL-3.0"
+}

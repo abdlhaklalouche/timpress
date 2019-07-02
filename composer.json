@@ -1,0 +1,26 @@
+{
+    "name": "abdlhaklalouche/timpress",
+    "description": "WordPress starter theme with timber support",
+    "keywords": ["Timpress", "WordPress", "Theme", "MVC", "Twig templates", "Twig", "Timber"],
+    "homepage": "https://github.com/abdlhaklalouche/timpress",
+    "authors": [
+        {
+            "name": "abdlhaklalouche",
+            "email": "abdlhaklalouche@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Timpress\\": "./app"
+        },
+        "files": [
+            "./app/helpers.php"
+        ]
+    },
+    "require": {
+        "timber/timber": "^1.10"
+    },
+    "license": "GPL-3.0"
+}
