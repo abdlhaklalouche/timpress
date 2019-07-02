@@ -1,0 +1,10 @@
+@charset "utf-8";
+/**
+* The right-to-left stylesheet is included automatically if the website language’s text direction is right-to-left.
+* https://codex.wordpress.org/Right_to_Left_Language_Support
+*/
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
