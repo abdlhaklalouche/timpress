@@ -16,7 +16,7 @@ class Setup extends Provider {
   {
     return Timber::$locations = get_template_directory() . '/assets/views/'; 
   }
-  
+
   /**
 	 * Clean wordpress default styles on the head and some other stuffs.
 	 * 
@@ -34,8 +34,17 @@ class Setup extends Provider {
 
 		remove_action( 'wp_head', 'rest_output_link_wp_head', 10);
 		remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10);
-		remove_action( 'template_redirect', 'rest_output_link_header', 11, 0);
+    remove_action( 'template_redirect', 'rest_output_link_header', 11, 0);
+    
+    add_filter( 'script_loader_src', [$this, 'cleanup_query_string'], 15, 1 ); 
+    add_filter( 'style_loader_src', [$this, 'cleanup_query_string'], 15, 1 ); 
 	}
+  
+  public function cleanup_query_string( $src ){ 
+    $parts = explode( '?ver', $src );
+    $parts = explode( '&ver', $parts[0] );
+    return $parts[0]; 
+  }
 
   public function add_theme_supports()
   {
