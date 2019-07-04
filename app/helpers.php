@@ -108,6 +108,9 @@ if (!function_exists('mix')) {
 				throw new Exception('Mix file does not exist.');
       }
     }
+    if(starts_with($manifest[$path], '/')) {
+      $manifest[$path] = ltrim($manifest[$path], '/');
+    }
     $path = $manifestDirectory . $manifest[$path];
 		return get_template_directory_uri() . $path;
 	}
