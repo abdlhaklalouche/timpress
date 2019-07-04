@@ -8,6 +8,7 @@ class Setup extends Provider {
   public function register()
   {
     $this->startTimber();
+    $this->cleanUp();
     add_action('after_setup_theme', [$this, 'add_theme_supports']);
   }
 
@@ -15,13 +16,33 @@ class Setup extends Provider {
   {
     return Timber::$locations = get_template_directory() . '/assets/views/'; 
   }
+  
+  /**
+	 * Clean wordpress default styles on the head and some other stuffs.
+	 * 
+	 * @return void
+	 */
+	private function cleanUp()
+	{
+		remove_action( 'wp_head', 'print_emoji_detection_script', 7);
+		remove_action( 'wp_print_styles', 'print_emoji_styles' );
+		remove_action( 'wp_head', 'wp_generator' );
+		remove_action( 'wp_head', 'wp_resource_hints', 2);
+		remove_action( 'wp_head', 'rsd_link');
+		remove_action( 'wp_head', 'wlwmanifest_link');
+		remove_action( 'wp_head', 'wp_shortlink_wp_head');
+
+		remove_action( 'wp_head', 'rest_output_link_wp_head', 10);
+		remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10);
+		remove_action( 'template_redirect', 'rest_output_link_header', 11, 0);
+	}
 
   public function add_theme_supports()
   {
     add_theme_support('post-thumbnails');
-    add_theme_support('title-tag');
-    add_theme_support('automatic-feed-links');
-    add_theme_support('customize-selective-refresh-widgets');
+    // add_theme_support('title-tag');
+    // add_theme_support('automatic-feed-links');
+    // add_theme_support('customize-selective-refresh-widgets');
 
     add_theme_support('custom-header', [
       'default-image'          => '',
