@@ -101,6 +101,8 @@ then open ```app/config.php``` and register your provider by adding this line to
     
     {% endblock content %}
     ```
+    [Lean more](https://twig.symfony.com/doc/2.x/) about twig templating
+
   To render the file you've created you need to add ```method``` to your controller that do this like this example:
   ```php
   <?php
