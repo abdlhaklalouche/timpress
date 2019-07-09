@@ -60,7 +60,7 @@ if(!function_exists('config')) {
   function config(string $path)
   {
     $keys = explode('.', $path);
-    $data = include_once('config.php');
+    $data = include('config.php');
     foreach($keys as $key) {
       if(!isset($data[$key])) {
         return;
