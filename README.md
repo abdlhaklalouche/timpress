@@ -39,7 +39,7 @@ All the wordpress stuffs hooks and filters, etc.. are managed not inside ```func
 
 For example to enqueue a new script or style just navigate to ```app/Providers/Enqueue.php``` and add content inside ```enqueue_scripts()``` and this last method will be called inside ```register``` method.
 
-To create a new provider you have to navigate to ```app/Providers``` and make new file and name it as you want the add this content:
+To create a new provider you have to navigate to ```app/Providers``` and make new file and name it as you want and add this content:
 
 ```php
 <?php
