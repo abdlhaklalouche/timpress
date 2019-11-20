@@ -18,6 +18,8 @@ Move the theme to your themes location and open terminal from that location and 
 * ```composer install```
 * ```npm install```
 
+or you can use the theme installer from [here](https://github.com/abdlhaklalouche/timpress-cli)
+
 ## Usage
 
 ### stylesheet and javascript
